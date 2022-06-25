@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/common_styles.css">
+    <title>Orbitz Hotel Deals, Flights, Cheap Vacations & Rental Cars</title>
+    <link type="image/x-icon" href="https://www.orbitz.com/favicon.ico" sizes="16x16 32x32" rel="shortcut icon">
+    <link rel="stylesheet" href="./styles/search_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <style>
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="md_main_container">
+        <header class="md_header">
+            <nav class="md_nav1">
+                <div><a href="index.html"><img
+                            src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" /></a></div>
+                <div>
+                    <button id="travel">More travel&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></button>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-building"></i>&nbsp;&nbsp;&nbsp;&nbsp;Stays</a></li>
+                        <li><a href="#"><i class="fa-solid fa-plane-up"></i>&nbsp;&nbsp;&nbsp;&nbsp;Flights</a></li>
+                        <li><a href="#"><i class="fa-solid fa-suitcase-rolling"></i>&nbsp;&nbsp;&nbsp;&nbsp;Packages</a>
+                        </li>
+                        <li><a href="#"><i class="fa-solid fa-car"></i>&nbsp;&nbsp;&nbsp;&nbsp;Cars</a></li>
+                        <li><a href="#"><i class="fa-solid fa-road-circle-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;Cruses</a>
+                        </li>
+                        <li><a href="#"><i class="fa-regular fa-rectangle-list"></i>&nbsp;&nbsp;&nbsp;&nbsp;Things to
+                                do</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">Groups & meetings</a></li>
+                        <li><a href="#">Travel Blog</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+
+            <nav class="md_nav2">
+                <div class="md_inner_right">
+                    <button><a href="">Español</a></button>
+                    <button><a href="">List your property</a></button>
+                    <button><a href="">Support</a></button>
+                    <button><a href="">Trips</a></button>
+                    <button class="md_click">Sign in</button>
+                </div>
+                <div class="md_signin">
+                    <div class="md_upper_div">
+                        <h3>Members can access discounts, points and special features</h3>
+                        <div class="md_div">
+                            <button id="md_sign"><a href="">Sign in</a></button>
+                            <button id="md_cfa"><a href="">Create a free account</a></button>
+                        </div>
+                    </div>
+                    <div class="md_lower_div">
+                        <div><a href="">List of favourites</a></div>
+                        <div><a href="">Loyality program</a></div>
+                        <hr>
+                        <div><a href="">Feedback</a></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="md_main_container md_main_container2">
+        <header class="md_header">
+            <nav class="md_nav1">
+                <div><a href="index.html"><img
+                            src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" /></a></div>
+                <div>
+                    <button id="travel">More travel&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></button>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-building"></i>&nbsp;&nbsp;&nbsp;&nbsp;Stays</a></li>
+                        <li><a href="#"><i class="fa-solid fa-plane-up"></i>&nbsp;&nbsp;&nbsp;&nbsp;Flights</a></li>
+                        <li><a href="#"><i class="fa-solid fa-suitcase-rolling"></i>&nbsp;&nbsp;&nbsp;&nbsp;Packages</a>
+                        </li>
+                        <li><a href="#"><i class="fa-solid fa-car"></i>&nbsp;&nbsp;&nbsp;&nbsp;Cars</a></li>
+                        <li><a href="#"><i class="fa-solid fa-road-circle-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;Cruses</a>
+                        </li>
+                        <li><a href="#"><i class="fa-regular fa-rectangle-list"></i>&nbsp;&nbsp;&nbsp;&nbsp;Things to
+                                do</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">Groups & meetings</a></li>
+                        <li><a href="#">Travel Blog</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+
+            <nav class="md_nav2">
+                <div class="md_inner_right">
+                    <button class="md_work_logo"><i class="fa-solid fa-briefcase fa-customize"></i></button>
+                    <button class="md_click2"><i class="fa-solid fa-user fa-customize"></i></button>
+                </div>
+                <div class="md_signin2">
+                    <div class="md_upper_div">
+                        <h3>Members can access discounts, points and special features</h3>
+                        <div class="md_div">
+                            <button id="md_sign"><a href="">Sign in</a></button>
+                            <button id="md_cfa"><a href="">Create a free account</a></button>
+                        </div>
+                    </div>
+                    <div class="md_lower_div">
+                        <div><a href="">List of favourites</a></div>
+                        <div><a href="">Loyality program</a></div>
+                        <hr>
+                        <div><a href="">Customer support</a></div>
+                        <div><a href="">Feedback</a></div>
+                        <div><a href="">List your property</a></div>
+                        <hr>
+                        <div><a href="">Español</a></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="md_main_container md_main_container2 md_main_container3">
+        <header class="md_header">
+            <nav class="md_nav1">
+                <div><a href="index.html"><img
+                            src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" /></a></div>
+
+            </nav>
+
+            <nav class="md_nav2">
+                <div class="md_inner_right">
+
+                    <button class="md_click2"><i class="fa-solid fa-magnifying-glass fa-customize"></i></button>
+                    <button class="md_work_logo"><i class="fa-solid fa-briefcase fa-customize"></i></button>
+                    <button class="md_click3"><i class="fa-solid fa-user fa-customize"></i></button>
+                </div>
+                <div class="md_signin2 md_signin3">
+                    <div class="md_upper_div">
+                        <h3>Members can access discounts, points and special features</h3>
+                        <div class="md_div">
+                            <button id="md_sign"><a href="">Sign in</a></button>
+                            <button id="md_cfa"><a href="">Create a free account</a></button>
+                        </div>
+                    </div>
+                    <div class="md_lower_div">
+                        <div><a href="">List of favourites</a></div>
+                        <div><a href="">Loyality program</a></div>
+                        <hr>
+                        <div><a href="">Customer support</a></div>
+                        <div><a href="">Feedback</a></div>
+                        <div><a href="">List your property</a></div>
+                        <hr>
+                        <div><a href="">Español</a></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <!-- Header Ends-->
+
+    <div class="sk_container-mobile" style="font-size: 16px">
+        <div>
+            <center><i class="fa-solid fa-magnifying-glass"></i></center>
+        </div>
+        <div>
+            <div>Las Vegas (and vicnity), Nevada, United States of America</div>
+            <div>Apr 16 - Apr 17 2 travelers</div>
+        </div>
+    </div>
+    <div class="filter-mobile">
+        <div>
+            <div style="margin-right: 5px;"><center><i class="fa-solid fa-filter"></i> &nbsp;Sort & Filter</center></div>
+            <div style="margin-left: 5px;">View in a map</div>
+        </div>
+        <div>See how we pick our recommended properties</div>
+    </div>
+
+    <div class="sk_container-2" style="font-size: 16px;margin-top: 20px;margin-bottom: 20px;">
+        <div class="sk_font-2" style="background-color: white;">
+            <i class="fa-solid fa-location-dot"></i>
+            <div style="padding-top: 5px;padding-bottom: 5px;">
+                <div style="font-size: 12px;color: gray;">Going to</div>
+                <div>Las Vegas (and vicinity), Nevada,</div>
+            </div>
+        </div>
+
+        <div class="sk_font-2" style="background-color: white;">
+            <i class="fa-solid fa-calendar-day"></i>
+            <div style="padding-top: 5px;padding-bottom: 5px;">
+                <div style="font-size: 12px;color: gray;">Check-in</div>
+                <div>Apr 14</div>
+            </div>
+        </div>
+        <div class="sk_font-2" style="background-color: white;">
+            <i class="fa-solid fa-calendar-day"></i>
+            <div style="padding-top: 5px;padding-bottom: 5px;">
+                <div style="font-size: 12px;color: gray;">Check-out</div>
+                <div>Apr 15</div>
+            </div>
+        </div>
+        <div class="sk_font-2" style="background-color: white;">
+            <i class="fa-solid fa-user"></i>
+            <div style="padding-top: 5px;padding-bottom: 5px;">
+                <div style="font-size: 12px;color: gray;">Travelers</div>
+                <div>1 room,2 travelers</div>
+            </div>
+        </div>
+        <div><button>Search</button></div>
+    </div>
+    <div class="fltr-trip">
+        <!-- Filter Portion -->
+        <div id="vk_1_container">
+            <div class="vk_container_item">
+                <hr style="margin-top: 0%; width: 90%;">
+                <h2 class="h2">Search by property name</h2>
+                <div style="text-align: center;" class="vk_serch">
+                    <input class="ser_input" type="text" placeholder="e.g. Best Western ">
+                    <hr style="margin-top: 0%; width: 90%; margin-top: 30px;">
+                </div>
+                <h2 class="vk_h2">Filter by</h2>
+                <div id="vk_check">
+                    <h3 class="vk_h3" style=>Popular filters</h3>
+                    <p><input type="checkbox"> Free airport Shuttle</p>
+                    <p><input type="checkbox"> Hot tub</p>
+                    <p><input type="checkbox"> House</p>
+                    <p><input type="checkbox"> All inclusive</p>
+                    <p><input type="checkbox"> Breakfast</p>
+                    <h3 class="vk_h3">Star Ratin</h3>
+                    <div id="vk_grid">
+                        <div class="clr" onclick="color(this)">1
+                            <span>&#9733;</span>
+                        </div>
+                        <div>2
+                            <span>&#9733;</span>
+                        </div>
+                        <div>3
+                            <span>&#9733;</span>
+                        </div>
+                        <div>4
+                            <span>&#9733;</span>
+                        </div>
+                        <div>5
+                            <span>&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="vk_check2">
+                    <h3 class="vk_h3">Your budget</h3>
+                    <p><input type="checkbox"> Less than $75</p>
+                    <p><input type="checkbox"> $75 to $125</p>
+                    <p><input type="checkbox"> $125 to $200</p>
+                    <p><input type="checkbox"> $200 to $300</p>
+                    <p><input type="checkbox"> Greater than $300</p>
+                </div>
+                <div id="vk_check2">
+                    <h3 class="vk_h3">Guest rating</h3>
+                    <p><input type="radio">Any</p>
+                    <p><input type="radio">Wonderful 4.5+</p>
+                    <p><input type="radio">Very good 4+</p>
+                    <p><input type="radio">Good 3.5+</p>
+                </div>
+                <div id="vk_check2">
+                    <h3 class="vk_h3">Payment type </h3>
+                    <p><input type="checkbox"> Fully refundable</p>
+                    <p><input type="checkbox"> Reserve now, pay later</p>
+                </div>
+                <div id="vk_check2">
+                    <h3 class="vk_h3">Property type</h3>
+                    <p><input type="checkbox"> House</p>
+                    <p><input type="checkbox"> Bed & breakfas</p>
+                    <p><input type="checkbox"> Hotel</p>
+                    <p><input type="checkbox"> ville</p>
+                    <p><input type="checkbox"> Apart-hotel</p>
+                    <p><input type="checkbox"> Condo</p>
+                    <p><input type="checkbox"> cabin</p>
+                    <p><input type="checkbox">Hotel resort</p>
+                </div>
+                <div id="vk_check2">
+                    <h3 class="vk_h3">Traveler Experience</h3>
+                    <p><input type="checkbox"> LGBTQ welcoming </p>
+                    <div class="vk_pdiv">See properties that pledge to make all guests feel safe, welcome, and
+                        respected.</div>
+                    <p><input type="checkbox"> Business friendly</p>
+                    <div class="vk_pdiv">See properties with amenities to help you work comfortably, like WiFi and
+                        breakfast.</div>
+                    <p><input type="checkbox"> Family friendly</p>
+                    <div class="vk_pdiv">See properties that include family essentials like in-room conveniences and
+                        activities for the kids.</div>
+                </div>
+                <div id="vk_check2">
+                    <h3 class="vk_h3">Neighborhood</h3>
+                    <p><input type="radio">Trade Center</p>
+                    <p><input type="radio">Bur Dubai</p>
+                    <p><input type="radio">Deira</p>
+                    <p><input type="radio">Barsha Heights</p>
+                    <p><input type="radio">Murqquab</p>
+                    <p><input type="radio">Trade Center 1</p>
+                    <p><input type="radio">Jumeireh Lake Towers</p>
+                    <p><input type="radio">Al Quoz</p>
+                    <p><input type="radio">Umm Suqeim</p>
+                    <p><input type="radio">Al Sufouh</p>
+                    <a class="vk_see" href="">See More</a>
+                </div>
+                <div id="vk_check2">
+                    <h3 class="vk_h3">Populer location</h3>
+                    <p><input type="radio">Dubai Mall</p>
+                    <p><input type="radio">Burj Khalifa </p>
+                    <p><input type="radio">Jumeireh Beach</p>
+                    <p><input type="radio">Dubai Expo 2020</p>
+                    <p><input type="radio">Mall of the Emirate</p>
+                    <p><input type="radio">Burj Al Arab</p>
+                    <p><input type="radio">The Walk</p>
+                    <p><input type="radio">Dubai Marina Mall</p>
+                    <p><input type="radio">Sheik Zayad Road</p>
+                    <p><input type="radio">Gold Souk</p>
+                    <a class="vk_see" href="">See More</a>
+                </div>
+                <div id="vk_check2">
+                    <h3 class="vk_h3">Meal plans available</h3>
+                    <p><input type="checkbox"> Breakfast included</p>
+                    <p><input type="checkbox"> Lunch include</p>
+                    <p><input type="checkbox"> Dinner include</p>
+                    <p><input type="checkbox"> All include</p>
+                </div>
+                <div id="vk_check2">
+                    <h3 class="vk_h3"> amenities</h3>
+                    <p><input type="checkbox"> Free airport shuttle</p>
+                    <p><input type="checkbox"> Ocean View</p>
+                    <p><input type="checkbox"> Hot tub</p>
+                    <p><input type="checkbox"> Casino</p>
+                    <p><input type="checkbox"> Water park</p>
+                    <p><input type="checkbox"> Spa</p>
+                    <p><input type="checkbox"> Gym</p>
+                    <p><input type="checkbox"> Cribs</p>
+                    <p><input type="checkbox"> Kitchen</p>
+                    <p><input type="checkbox"> free Wifi</p>
+                    <a class="vk_see" href="">See more</a>
+                </div>
+                <div id="vk_check2">
+                    <h3 class="vk_h3">Orbitz Rewards</h3>
+                    <p><input type="checkbox"> VIP Access properties</p>
+                    <div class="vk_pdiv">Top-rested stay with member perks</div>
+                </div>
+                <div id="vk_check2">
+                    <h3 class="vk_h3">Accessibility</h3>
+                    <p><input type="checkbox"> Elevator</p>
+                    <p><input type="checkbox"> Accessible bathroom</p>
+                    <p><input type="checkbox"> Roll- in shower</p>
+                    <p><input type="checkbox"> in-room Accessibility</p>
+                    <p><input type="checkbox"> Service animals allowed</p>
+                    <p><input type="checkbox"> Stair-free oath to entrance</p>
+                    <p><input type="checkbox"> Sign language-capble staff</p>
+                </div>
+            </div>
+        </div>
+        <!-- Filter Portion Ends Here-->
+
+        <!-- Trip-Planner -->
+        <div id="container">
+
+        </div>
+        <div>
+            <img src="https://tpc.googlesyndication.com/simgad/1405978305585973323?" />
+            <img src="https://tpc.googlesyndication.com/simgad/1405978305585973323?" />
+            <img src="https://tpc.googlesyndication.com/simgad/1405978305585973323?"
+                style="position: sticky;top: 30px;" />
+        </div>
+        <!-- Trip-Planner Ends Here-->
+    </div>
+    <!-- QR Code -->
+    <div class="reward-box">
+        <div class="reward-image">
+            <img src="https://a.travel-assets.com/mad-service/footer/marquee/ORB_App_Footer_v1.jpg" alt="">
+        </div>
+        <div class="reward-content-qr">
+            <div class="reward-content">
+                <h1>Rewards are waiting for you in the Orbitz app</h1>
+                <ul>
+                    <li>Earn 4% back when you book your hotel in app, vs. 3% on site</li>
+                    <li>Get flight status and gate number notifications</li>
+                    <li>Have questions about your stay? Message your hotel right in the app</li>
+                </ul>
+                <button class="reward-content-hidden-button">Get the app</button>
+                <h2>Text yourself a download link</h2>
+                <div class="reward-content-form">
+                    <div class="reward-content-form-select">
+                        <div>
+                            <div>
+                                <p>Country Code</p>
+                                <select>
+                                    <option value=" Afganistan"> Afganistan +93</option>
+                                    <option value=" Albania  "> Albania +355</option>
+                                    <option value=" Algeria "> Algeria +213</option>
+                                    <option value=" American Samoa"> American Samoa +1</option>
+                                    <option value=" Andorra "> Andorra +376"</option>
+                                    <option value=" Anguilla "> Anguilla +1"</option>
+                                    <option value=" Antartica "> Antartica +672</option>
+                                    <option value=" Armenia "> Armenia +374</option>
+                                    <option value=" Aruba "> Aruba +297</option>
+                                    <option value=" Australia "> Australia +61</option>
+                                    <option value=" Austria "> Austria +614</option>
+                                    <option value=" Bahamas "> Bahamas +1</option>
+                                    <option value=" Bahrain "> Bahrain +973</option>
+                                    <option value=" Bangladesh "> Bangladesh +880</option>
+                                    <option value=" Barbados "> Barbados +1</option>
+                                    <option value=" Belarus "> Belarus + 375</option>
+                                    <option value=" Belgim "> Belgim +32</option>
+                                    <option value=" Bolivia "> Bolivia +591</option>
+                                    <option value=" Brazil "> Brazil +55</option>
+                                    <option value=" Bulgaria"> Bulgaria +355</option>
+                                    <option value=" Cambodia"> Cambodia +855</option>
+                                    <option value="Cameroon"> Cameroon +237</option>
+                                    <option value="Canada "> Canada +1</option>
+                                    <option value="Cape Verde"> Cape Verde +67</option>
+                                    <option value="Cook Island"> Cook Island +682</option>
+                                    <option value="Cyprus"> Cyprus +357</option>
+                                    <option value="Denmark"> Denmark +45 </option>
+                                    <option value="Dominica"> Dominica /+1</option>
+                                    <option value="Egypt"> Egypt +20</option>
+                                    <option value="Eritea"> Eritea +291</option>
+                                    <option value="Ethopia"> Ethopia +251</option>
+                                    <option value="Hong Kong"> Hong Kong +852</option>
+                                    <option value="Hungry"> Hungry +36</option>
+                                    <option value="Iceland"> Iceland +354</option>
+                                    <option value="India"> India +91</option>
+                                    <option value="Indonesia"> Indonesia +62</option>
+                                    <option value="Iran "> Iran +965</option>
+                                    <option value="Italy"> Italy +39</option>
+                                    <option value=" Jamica"> Jamica +1</option>
+                                    <option value="Japan"> Japan +81</option>
+                                    <option value="Kuwait"> Kuwait +965</option>
+                                    <option value=" Kenya"> Kenya +254</option>
+                                    <option value="Laos"> Laos +865</option>
+                                    <option value=" Latvia"> Latvia +371</option>
+                                    <option value="Liberia"> Liberia +231</option>
+                                    <option value=" Nepal"> Nepal +977</option>
+                                    <option value=" Niger"> Niger +243</option>
+                                    <option value=" New Zealand"> New Zealand +64</option>
+                                    <option value="Norway"> Norway +47</option>
+                                    <option value="North Korea"> North Korea +850</option>
+                                    <option value=" Oman "> Oman +968</option>
+                                    <option value=" Pakistan"> Pakistan +92</option>
+                                    <option value="Panama"> Panama +507</option>
+                                    <option value=" Poland"> Poland +48</option>
+                                    <option value=" Qutar"> Qutar +947</option>
+                                    <option value=" Romania"> Romania +40</option>
+                                    <option value="Russia"> Russia +7</option>
+                                    <option value="Sebria"> Sebria +381</option>
+                                    <option value="Spain"> Spain +34</option>
+                                    <option value=" Sri Lanka"> Sri Lanka +94</option>
+                                    <option value=" Sudan"> Sudan +249</option>
+                                    <option value="Turkey"> Turkey +90</option>
+                                    <option value=" US Virgin Island "> US Virgin Island +1</option>
+                                    <option value="Ukrain "> Ukrain +380</option>
+                                    <option value=" United Kingdom "> United Kingdom +44</option>
+                                    <option value=" Vietnam"> Vietnam +84</option>
+                                    <option value=" Zambia"> Zambia +260</option>
+                                    <option value=" Zimbabwe"> Zimbabwe +263</option>
+                                </select>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Phone number" />
+                    </div>
+                    <div>
+                        <button>Get the app</button>
+                    </div>
+                </div>
+                <p>By providing your number, you agree to receive a one-time automated text message with a link to get
+                    the app. Standard text message rates may apply.</p>
+            </div>
+            <div class="reward-qr">
+                <img src="https://a.travel-assets.com/mad-service/qr-code/portfolio_app_landing/qr_app_landing_footer_orbitz.png"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <section class="accrodion-expand">
+        <div>
+            <div class="div-open">Destination<i class="fa-solid fa-angle-down"></i></div>
+            <div class="div-hide">
+                <ul id="done">
+                    <hr class="line">
+                    <li><a href="#">Flight Under $200</a></li>
+                    <li><a href="#">Orbitz Coupons</a></li>
+                    <li><a href="#">Travel Deal</a></li>
+                    <li><a href="#">Car Rental Deals</a></li>
+                    <li><a href="#">Hotel Under $100</a></li>
+                    <li><a href="#">Vacation Package Deals</a></li>
+                    <li><a href="#">Orbitz Hotel Coupon</a></li>
+                    <li><a href="#">Last Minute Travel Deals</a></li>
+                    <li><a href="#">All our Destination</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="div-open">Top hotel beach Destination<i class="fa-solid fa-angle-down"></i></div>
+            <div class="div-hide">
+                <ul id="done">
+                    <hr class="line">
+                    <li><a href="#">Atlanti City hotel</a></li>
+                    <li><a href="#">Honolulu hotels</a></li>
+                    <li><a href="#">Lahaina hotels</a></li>
+                    <li><a href="#">Myrtle Beach hotel</a></li>
+                    <li><a href="#">San Diego hotels</a></li>
+                    <li><a href="#">Virgini Beach hotels</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="div-open">Top hotel city Destination<i class="fa-solid fa-angle-down"></i></div>
+            <div class="div-hide">
+                <ul id="done">
+                    <hr class="line">
+                    <li><a href="#">Austin hotel</a></li>
+                    <li><a href="#">Chicago hotel</a></li>
+                    <li><a href="#">Dallas hotel</a></li>
+                    <li><a href="#">Denver hotel</a></li>
+                    <li><a href="#">Houston hotel</a></li>
+                    <li><a href="#">Scottsdale hotel</a></li>
+                    <li><a href="#">Las Vagas hotel</a></li>
+                    <li><a href="#">Nashville hotels</a></li>
+                    <li><a href="#">New Orleans hotel</a></li>
+                    <li><a href="#">Phoenix hotel</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="div-open">Top vacation Destination<i class="fa-solid fa-angle-down"></i></div>
+            <div class="div-hide">
+                <ul id="done">
+                    <hr class="line">
+                    <li><a href="#">Caribbean vacation</a></li>
+                    <li><a href="#">Hawaii vacation</a></li>
+                    <li><a href="#">Mexico vacation</a></li>
+                    <li><a href="#">New york vacation</a></li>
+                    <li><a href="#">Punta Vegas vacation</a></li>
+                    <li><a href="#">Las Vagas vacation</a></li>
+                    <li><a href="#">Cancun vacation</a></li>
+                    <li><a href="#">Costa rica vacation </a></li>
+                    <li><a href="#">Colorado vacation</a></li>
+                    <li><a href="#">key West vacation</a></li>
+                    <li><a href="#">Grand Canyon</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="div-open">Top Flight Destination<i class="fa-solid fa-angle-down"></i></div>
+            <div class="div-hide">
+                <ul id="done">
+                    <hr class="line">
+                    <li><a href="#">Flight To Vegas</a></li>
+                    <li><a href="#">Flight To New York</a></li>
+                    <li><a href="#">Flight To Los Angeles</a></li>
+                    <li><a href="#">Flight To Chicago</a></li>
+                    <li><a href="#">Flight To San Diego</a></li>
+                    <li><a href="#">Flight To Seattle</a></li>
+                    <li><a href="#">Flight To Denver</a></li>
+                    <li><a href="#">Flight To San Frincsco</a></li>
+                    <li><a href="#">Flight To Washington</a></li>
+                    <li><a href="#">Flight To Boston</a></li>
+                    <li><a href="#">Flight To Salt Lake City</a></li>
+                    <li><a href="#">Flight To Reno</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="div-open">Top car rental destination in America<i class="fa-solid fa-angle-down"></i></div>
+            <div class="div-hide">
+                <ul id="done">
+                    <hr class="line">
+                    <li><a href="#">Car rental in Atlanta</a></li>
+                    <li><a href="#">Car rental in Boston</a></li>
+                    <li><a href="#">Car rental in Chicago</a></li>
+                    <li><a href="#">Car rental in Cininnat</a></li>
+                    <li><a href="#">Car rental in Dallas</a></li>
+                    <li><a href="#">Car rental in Denver</a></li>
+                    <li><a href="#">Car rental in Houston</a></li>
+                    <li><a href="#">Car rental in Las Vegas</a></li>
+                    <li><a href="#">Car rental in Miami</a></li>
+                    <li><a href="#">Car rental in New york City</a></li>
+                    <li><a href="#">Car rental in Palm Spring</a></li>
+                    <li><a href="#">Car rental in New Orleans</a></li>
+                    <li><a href="#">Car rental in New York City</a></li>
+                    <li><a href="#">Car rental in Orlando</a></li>
+                    <li><a href="#">Car rental in San Diego</a></li>
+                    <li><a href="#">Car rental in tampa</a></li>
+                    <li><a href="#">Car rental in Washington DC</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div id="vk_container">
+        <div class="vk_a">
+            <img style="height: 25px; "
+                src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
+                alt="">
+        </div>
+        <div>
+            <div class="vk_b">
+                <h3>Company</h3>
+                <ul id="done"><a href="#">About</a></ul>
+                <ul id="done"><a href="#">Jobs</a></ul>
+                <ul id="done"><a href="#">List your property</a></ul>
+                <ul id="done"><a href="#">Partnership</a></ul>
+                <ul id="done"><a href="#">Newsroom</a></ul>
+                <ul id="done"><a href="#">Investor Relation</a></ul>
+                <ul id="done"><a href="#">Site Map</a></ul>
+                <ul id="done"><a href="#">Orbitz Rewards</a></ul>
+                <ul id="done"><a href="#">Advertising</a></ul>
+            </div>
+            <div>
+                <h3>Explor</h3>
+                <ul id="done"><a href="#">Hotel in Unites States</a></ul>
+                <ul id="done"><a href="#">Vacation Rental in United</a></ul>
+                <ul id="done"><a href="#">Car Rentals in United States</a></ul>
+                <ul id="done"><a href="#">Domestic</a></ul>
+                <ul id="done"><a href="#">Vacation Packeges in United State</a></ul>
+                <ul id="done"><a href="#">Orbitz Review</a></ul>
+                <ul id="done"><a href="#">Orbitz Coupons</a></ul>
+                <ul id="done"><a href="#">LGBTQ travel</a></ul>
+                <ul id="done"><a href="#">Unique Accommodations</a></ul>
+                <ul id="done"><a href="#">Travel Blog</a></ul>
+            </div>
+            <div>
+                <h3>Politices</h3>
+                <ul id="done"><a href="#">Privacy Polict</a></ul>
+                <ul id="done"><a href="#">Terms of Use</a></ul>
+                <ul id="done"><a href="#">Vrbo terms and condition</a></ul>
+                <ul id="done"><a href="#">Orbitz Reward Terms</a></ul>
+                <ul id="done"><a href="#">Do not sell my personal information</a></ul>
+            </div>
+            <div>
+                <h3>Help</h3>
+                <ul id="done"><a href="#">Support</a></ul>
+                <ul id="done"><a href="#">Cancel your hotel or vacation rentel booking</a></ul>
+                <ul id="done"><a href="#">Cancel your fight</a></ul>
+                <ul id="done"><a href="#">Refund timeline,policies & rocesse</a></ul>
+                <ul id="done"><a href="#">Use an Orbitz Coupon</a></ul>
+            </div>
+        </div>
+    </div>
+    <div class="vk_last">
+        <hr>
+        <p id="tag">© 2022 Orbitz, LLC, an Expedia Group Company. All rights reserved.</p>
+        <p id="tag">Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST#
+            2083930-50.</p>
+    </div>
+
+
+    <!-- Model example-->
+    <!-- <div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div> -->
+
+</body>
+
+</html>
+<script>
+    window.onresize = screen;
+    window.onload = screen;
+
+    function screen() {
+        myWidth = window.innerWidth;
+
+        var check = document.querySelector(".md_main_container");
+        var check2 = document.querySelector(".md_main_container2");
+        var check3 = document.querySelector(".md_main_container3");
+
+        if (myWidth > 575 && myWidth < 991) {
+            check.style.display = "none";
+            check3.style.display = "none"
+            check2.style.display = "flex"
+        }
+        else if (myWidth > 293 && myWidth < 575) {
+            check.style.display = "none";
+            check2.style.display = "none"
+            check3.style.display = "flex"
+        }
+        else {
+            check3.style.display = "none"
+            check2.style.display = "none"
+            check.style.display = "flex";
+
+        }
+
+    }
+
+
+
+    document.querySelector(".md_click").addEventListener("click", mdtoggle);
+
+    function mdtoggle() {
+
+        var show = document.querySelector(".md_signin");
+        if (show.style.display != 'none') {
+            show.style.display = 'none';
+        }
+        else {
+            show.style.display = 'block';
+        }
+    }
+
+    document.querySelector(".md_click2").addEventListener("click", mdtoggle2);
+
+    function mdtoggle2() {
+
+        var show2 = document.querySelector(".md_signin2");
+        if (show2.style.display != 'none') {
+            show2.style.display = 'none';
+        }
+        else {
+            show2.style.display = 'block';
+        }
+    }
+
+    document.querySelector(".md_click3").addEventListener("click", mdtoggle3);
+
+    function mdtoggle3() {
+
+        console.log("inside function")
+        var show3 = document.querySelector(".md_signin3");
+        if (show3.style.display != 'none') {
+            show3.style.display = 'none';
+        }
+        else {
+            show3.style.display = 'block';
+        }
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".div-open").click(function () {
+            $(".div-hide").toggle();
+        });
+    });
+</script>
+<script src="js/search_result.js"></script>
+
+<script>
+
+    // let filter = document.querySelector('#vk_1_container');
+    // let model = document.querySelector('#myModal');
+    // console.log(model);
+    // model.append(filter)
+
+</script>

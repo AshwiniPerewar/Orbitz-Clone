@@ -1,0 +1,891 @@
+/* Nav bar code start---md afzal */
+
+
+  
+  
+
+/* sign in end */
+/* nav bar end */
+body{
+  background-color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+ 
+}
+/* ap code starts here */
+.ap_outer{
+width:90%;
+margin: auto;
+height: 920px;
+margin-top: 30px;
+background-color: white;
+}
+.ap_container{
+height: 200px;
+display:grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: 360px;
+gap:2px;
+
+}
+.ap_container>div{
+width: 100%;
+height: 80%;
+
+}
+
+.ap_section>img{
+width: 100%;
+height: 100%;
+
+} 
+
+.ap_section1{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: repeat(2,143px);
+gap: 1px;
+}
+
+#ap_p{
+color: teal;
+}
+#ap_p>i{
+margin: 10px;
+}
+.ap_section1>div>img{
+height: 100%;
+width: 100%;
+background-size: auto;
+}
+
+/* navbar */
+.ap_nav{
+margin-top: 85px;
+margin-left: 15px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding:5px 10px;
+
+}
+.ap_nav1{
+width: 100%;
+display: flex;
+align-items:center;
+}
+
+.ap_nav1>p{
+font-size: 16px;
+font-weight: 500;
+margin-right: 20px;
+
+}
+
+.ap_nav1>button{
+background-color: #c83259;
+width: 160px;
+height: 32px;
+color: white;
+font-size: 16px;
+border: none;
+margin-left:auto; 
+}
+#ap_hr{
+margin-top: 0px;
+}
+
+/* overview */
+.ap_overview{
+display:grid;
+margin-left: 15px;
+grid-template-columns: 2fr 1fr;
+grid-template-rows: repeat(1,560px);
+gap: 10px;
+}
+
+
+.ap_overview>div{
+margin-left: 10px;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ap_col1>button{
+background-color: black;
+color: white;
+border: 4px solid black;
+border-radius: 5px;
+}
+
+.ap_col1>h1{
+margin-top: 5px;
+font-size: 28px;
+
+}
+
+.ap_col1>h3{
+font-size: 18px;
+  
+}
+.ap_col1>div{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: auto;
+}
+
+.ap_col2{
+margin-left: -20px;
+}
+.ap_col2>div{
+margin-top: 5px;
+margin-right: -20px;
+display: grid;
+grid-template-columns: 1.3fr 0.7fr;
+grid-template-rows: auto;
+}
+
+.ap_overview>div>div>p,
+.ap_overview>div>p,#ap_col2>p,
+.ap_vip2>div>p,.ap_room>div>div>p
+{
+color: #616161;
+font-size: 14px;
+line-height: 16px;
+margin-top: 0px;
+
+}
+
+.ap_overview>div>a,.ap_overview>div>div>a,
+#ap_col2>p>a,.ap_vip>a,.ap_room1>a
+{
+color: #007e8f;
+font-size: 14px;
+line-height: 16px;
+margin-right: 15px;
+}
+.ap_overview>div>a>i,.ap_overview>div>div>a>i,.ap_vip>a>i,.ap_room1>a>i{
+font-size: 12px;
+font-weight: bolder;
+line-height: 16px;
+margin-left: 10px;
+}
+
+
+.ap_overview>div>div>p>i,.ap_vip2>div>p>i,
+.ap_room>div>div>p>i{
+margin-right: 10px;
+font-size: 20px;
+}
+.ap_col2>img{
+height: 180px;
+width: 320px;
+border-radius: 15px;
+}
+
+/* VIP */
+.ap_vip{
+width: 90%;
+margin: auto;
+margin-top: 20px;
+background-color: white;
+display: flex;
+flex-direction: column;
+padding:2rem;
+    box-sizing: border-box;
+}
+#ap_vip{
+margin-left: 20px;
+display: flex;
+flex-direction: row;
+
+}
+#ap_vip>p{
+
+height: 20px;
+width: 23px;
+border-radius: 50%;
+background-color: black;
+color: white;
+padding: 6px;
+display: inline;
+}
+#ap_vip>h3{
+margin-left: 4px;
+
+}
+
+.ap_vip2{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: auto;
+}
+.ap_vip2 div:last-child p i{
+	float:left;
+}
+.ap_vip2 div:last-child p span{
+	overflow:hidden;
+}
+.ap_vip2>div{
+margin-left: 20px;
+}
+.ap_vip>a{
+margin-left: auto;
+}
+/* book */
+.ap_book{
+width: 90%;
+margin: auto;
+background-color: white;
+margin: auto;
+margin-top: 15px;
+
+}
+
+.ap_book1{
+display: grid;
+grid-template-columns: 0.1fr 2fr;
+grid-template-rows: auto;
+gap: 10px;
+padding:2rem;
+}
+#ap_col1{
+margin-top: 20px;
+margin-left: 20px;
+height: 35px;
+width: 35px;
+border-radius: 50%;
+background-color: rgb(48, 178, 230);
+}
+
+#ap_col1>i{
+font-size: 20px;
+margin-left: 7px;
+margin-top: 4px;
+}
+#ap_col2>p{
+margin: 5px;
+}
+
+#ap_col2>#ap_para
+{
+font-weight: bold;
+color: black;
+margin-top: 15px;
+}
+
+/* choose */
+
+.ap_choose{
+width: 80%;
+margin: auto;
+display: grid;
+grid-template-columns: 0.8fr 0.8fr 1.4fr 1.2fr;
+grid-template-rows: auto;
+gap: 20px;
+}
+
+.ap_choose>div{
+height: 40px;
+}
+.ap_choose>div>input{
+height: 40px;
+width: 100%;
+border: 1px solid black;
+}
+
+.ap_choose>div>button{
+background-color: #c83259;
+border: none;
+height: 45px;
+width: 100%;
+color: white;
+font-size: 16px;
+font-weight: 600;
+}
+#ap_checkin{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+#ap_h1{
+margin-left: 10%;
+}
+
+/* Room */
+
+.ap_room{
+width:90%;
+margin: auto;
+margin-top: 25px;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: auto;
+gap: 15px;
+}
+.ap_room>div{
+height: 700px;
+border: 1px groove black;
+background-color: white;
+}
+
+.ap_room>div>img{
+width: 100%;
+height: 160px;
+}
+
+.ap_room>div>h3,.ap_room1{
+margin-left: 10px;
+font-size: 18px;
+}
+
+.ap_room>div>div>p>i{
+font-size: 14px;
+}
+
+.ap_room1>a + p{
+font-size: 4px;
+margin-top: 10px;
+}
+
+.ap_room1>hr{
+margin-left: -10px;
+}
+
+.ap_room1>h3{
+display: inline;
+}
+.ap_room1>strike{
+font-size: 14px;
+margin-left: 3px;
+}
+
+.ap_room1>i{
+font-size: 14px;
+margin-left: 4px;
+}
+
+.ap_room1>div{
+width: 60px;
+height: 20px;
+background-color: #0e8445;
+color: white;
+font-size: 12px;
+border-radius: 4px;
+text-align: center;
+margin-top: 30px;
+}
+
+.ap_room1>button{
+height: 40px;
+width: 100px;
+background-color: #c83259;
+color: white;
+font-size: 16px;
+border: none;
+}
+
+/* medium*/
+@media only screen and (min-width:575px) and (max-width:991px) {
+
+.ap_container{
+  width: 90%;
+  margin: auto;
+ grid-template-columns: 2fr 1fr;
+  grid-template-rows: 300px;
+  
+}
+.ap_outer{
+width: 90%;
+margin: auto;
+height: 1300px;
+margin-top: 88px;
+background-color: white;
+}
+.ap_section1{
+grid-template-columns: 1fr;
+grid-template-rows: 118px  0px 120px;
+gap: 1px;
+}
+
+
+
+.ap_nav{
+  margin-top: 30px;
+}
+#ap2{
+  width: 0;
+  height: 0;
+}
+.ap_overview{
+  grid-template-columns: 1fr;
+  grid-template-rows:500px;
+  gap: 10px;
+}
+
+
+
+.ap_vip{
+  width: 90%;
+  margin: auto;
+height: 150px;
+  
+}
+.ap_vip2{
+  display: grid;
+  grid-template-columns: repeat(3,0.5fr);
+  grid-template-rows: auto;
+}
+.ap_vip>a{
+  margin-left: 70%;
+}
+.ap_nav1>div>button{
+  margin-left: 10px; 
+  margin-top: 10px;   
+}
+
+.ap_book{
+height: 100px;
+width: 90%;
+}
+
+.ap_col2>img{
+width: 95%;
+height: 200px;
+}
+
+.ap_book1{
+  display: grid;
+  grid-template-columns: 0.1fr 2fr;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+.ap_choose{
+  width: 90%;
+}
+#ap_h1{
+ margin-left: 40px;
+}
+.ap_room{
+  width: 90%;
+  grid-template-columns: repeat(2,1fr);
+  
+}
+
+
+}   
+/* small screens*/
+@media only screen and (min-width:293px) and (max-width:575px) {
+.ap_container{
+  width: 100%;
+  height: 400px;
+  grid-template-columns: 2fr;
+  grid-template-rows: 400px;
+  
+}
+
+
+.ap_outer{
+width: 100%;
+margin: auto;
+height: 1440px;
+margin-top: 88px;
+background-color: white;
+}
+#ap1,#ap2{
+width: 0%;
+height: 0%;
+}
+.ap_room{
+  width: 100%;
+  grid-template-columns: 1fr;
+  
+}
+
+.ap_nav{
+  margin-top: -65px;
+}
+
+.ap_overview{
+grid-template-columns: 1fr;
+grid-template-rows:500px;
+gap: 10px;
+}
+
+.ap_col2>img{
+width: 95%;
+height: 200px;
+}
+
+.ap_vip{
+width: 100%;
+height: 180px;
+
+}
+.ap_vip>a{
+margin-left: 190px;
+}
+
+#ap_h1{
+margin-left: 0px;
+}
+.ap_book{
+width: 100%;
+height: 100px;
+}
+
+.ap_book1{
+display: grid;
+grid-template-columns: 0.1fr 2fr;
+grid-template-rows: auto;
+gap: 10px;
+}
+.ap_choose{
+width: 100%;
+}
+
+.ap_room1>button{
+height: 40px;
+  width: 90px;
+margin-left: 250px;
+} 
+}
+/* ap code ends here */
+
+
+/* dont touch above part  */
+
+/* !! first box css start here  */
+
+/* main div is controlling all change in grid & all div */
+.av_1main {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  gap:2rem;
+ 
+}
+
+
+
+
+/* !! SECOND BOX STYLING START  */
+.av_2main {
+  width: 80%;
+  margin: auto;
+  padding-block:2rem;
+  box-sizing:border-box;
+  margin-top: 20px;
+  box-sizing: inherit;
+  font-size: 14px;
+  line-height: inherit;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-width: 0px;
+  background-color: rgb(255, 255, 255);
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+
+}
+.av_s1>div>h2{
+  margin-left: 15px;
+}
+
+/* submain controlling whole below div  */
+
+/* submian box control over  */
+.av_3submain {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.av_s2{
+  margin-right: 30px;
+}
+
+.av_s1>div{
+  margin-left: 10px;
+}
+.av_div{
+margin-top: -5%;
+margin-left: 5%
+}
+.av_div1{
+margin-top: -4%;
+margin-left: 5%
+}
+.av_div2{
+margin-top: -1%;
+margin-left: 3%
+}
+
+
+/* !!THIRD BOX SYLING START HERE  */
+.av_3main {
+  width: 80%;
+    margin: auto;
+  margin-top: 30px;
+  box-sizing: inherit;
+  font-size: 14px;
+  line-height: inherit;
+  border-style: solid;
+  border-width: 0px;
+  background-repeat: no-repeat;
+  grid-column: span 3;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+}
+
+
+
+/* below div first part of box 3 & all div is nested inside it */
+.av_33submain {
+  
+  margin: auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+/* below div second part of box 3 & all div is nested inside it */
+
+.av_sub333 {
+  
+  margin: auto;
+  margin-top: 20px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #fff;
+  border-radius: 5px;
+  
+}
+
+
+/* !! FORTH BOX SYTLING START HERE  */
+
+/* main div is controlling layout of div & controlling all div which is nested */
+
+.av_4main {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  height:inherit ;
+  background-color: white;
+  box-sizing: inherit;
+  font-size: 14px;
+  line-height: inherit;
+  border-style: solid;
+  border-width: 0px;
+  background-repeat: no-repeat;
+  padding: 0px;
+  grid-column-start: span 3;
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+}
+.av_41>h2,.av_s344>h2,.av_s3>h2{
+  margin-left: 20px;
+}
+
+
+/* !!STYLING OF FIFTH 5TH BOX START FROM HERE   */
+
+.av_5main {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  box-sizing: inherit;
+  font-size: 14px;
+  line-height: inherit;
+  border-style: solid;
+  border-width: 0px;
+  background-repeat: no-repeat;
+  padding: 0.75rem;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+
+}
+
+
+/* ! subdomain controlling all div below it , inclase if help needed  */
+
+
+
+/* STYLING OF 6 BOX STARTING FROM heRE   */
+
+.av_6main {
+  width: 80%;
+  height: 210px;
+  margin: auto;
+  box-sizing: inherit;
+  font-size: 14px;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  padding: 0.75rem;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+
+}
+
+.av_62>summary>span{
+    font-weight: bold;
+font-size: 16px;
+line-height: 22px;
+}
+
+
+@media only screen and (min-width:575px) and (max-width:991px) {
+  .av_1main,.av_2main,.av_3main,
+.av_4main,.av_5main,.av_6main,.av_3submain
+{
+width: 90%;
+height: auto;
+grid-template-columns: 1fr 1fr;
+box-sizing: inherit;
+padding: 0%;
+
+
+}
+
+
+}
+
+@media only screen and (min-width:293px) and (max-width:575px) {
+  .av_1main,.av_2main,.av_3main,.av_3submain,
+  .av_4main,.av_5main,.av_6main
+  {
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    box-sizing: inherit;
+    
+  }
+}  
+/* Slider Stylesheet */
+/* Image Slider Stylesheet */
+.wrapper 
+{
+width: 100%;
+height: 23%;
+overflow: hidden;
+position:relative;
+}
+
+.slides-container 
+{
+height: 100%;
+transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
+margin-left: 0px;
+}
+
+.slide-image 
+{
+height: 100%;
+width: 100%;
+position: absolute;
+}
+
+.slide-image img 
+{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.prev-btn 
+{
+  background:rgba(0,0,0,0.5);
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 60%);
+  z-index: 100;
+  cursor: pointer;
+  transition: 400ms;
+  width: 2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 1.5rem;
+  transform: translate(-50%, -50%);
+}
+
+.next-btn
+{
+  background: rgba(0,0,0,0.5);
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 60%);
+  z-index: 100;
+  cursor: pointer;
+  transition: 400ms;
+  width: 2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  right: 1.5rem;
+  transform: translate(-50%, -50%);
+}
+
+.next-btn:hover,
+.prev-btn:hover 
+{
+background: black;
+}
+
+.next-btn
+{
+right: 0;
+}
+
+.button_1:hover,.button_2:hover,.button_3:hover,.button_4:hover,.button_5:hover,.button_6:hover,.button_7:hover{
+  cursor: pointer;
+  background-color:#ad566f ;
+}
+
+

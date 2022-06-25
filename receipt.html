@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/receipt.css">
+    <script src="https://kit.fontawesome.com/17ea0910de.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="md_receipt_container">
+        <div>
+            <P>Payment successful</P>
+        </div>
+        <div>
+            <p class="p1">Payment type</p>
+            <p>Net banking</p>
+        </div>
+        <div>
+            <p class="p1">Bank</p>
+            <p>HDFC</p>
+        </div>
+        <div>
+            <p class="p1">Mobile</p>
+            <p>790*****44</p>
+        </div>
+        <div>
+            <p class="p1">Email</p>
+            <p>md*****@gmail.com</p>
+        </div>
+        <div>
+            <p class="p1">Amount paid</p>
+            <p>$ 2874.00</p>
+        </div>
+        <div>
+            <p class="p1">Transaction id</p>
+            <p>1234567****</p>
+        </div>
+        <div>
+            <button class="button1">Print</button>
+            <button class="button2">Close</button>
+        </div>
+        
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector(".button2").addEventListener("click",receiptpage);
+
+    function receiptpage(){
+        window.location.href="index.html"
+    }
+
+    document.querySelector(".button1").addEventListener("click",receiptpage2);
+
+    function receiptpage2(){
+        alert("Receipt printed successfully");
+    }
+</script>

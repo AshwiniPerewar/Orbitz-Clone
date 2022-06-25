@@ -1,0 +1,152 @@
+.ak_box1{
+    height:55px;
+    width: 100%;
+    border: 1px solid grey;
+    display:flex;
+ margin: auto;
+ margin-top: -10px;
+}
+.ak_box1>img{
+    margin: auto;
+    height:40px;
+}
+.ak_container1{
+    margin: auto;
+    height:650px;
+    width: 35%;
+    /* border:1px solid green */
+   
+}
+ .ak_box1>i{
+    margin-top:4px;
+    height:20px;
+    width:20px;
+ } 
+ 
+
+
+
+.ak_container1>h1{
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
+}
+.ak_container1>input{
+ 
+     height:50px;
+     width: 100%;
+     font-size: 20px;
+
+   
+}
+.ak_container1>p{
+    color: #616161;
+    font-size: 14px;
+    font-weight: 400;
+    font-family:  BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.ak_container1>h3{
+    color: #616161;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+
+
+.ak_container1>h3>u:hover{
+    
+Color:
+#007e8f;
+    cursor: pointer;
+    
+}
+.ak_btn{
+    color: white;
+height:50px;
+width: 97%;
+border: 0.4px;
+background-color:#ebb6c4;
+font-size: 15px;
+cursor: pointer;
+}
+
+.ak_btn:hover{
+    background-color:#c83259;
+}
+
+
+.ak_container1>h4{
+    text-align: center;
+    font-size: 15px;
+    color: #616161;
+   
+}
+.ak_container1>h4>u:hover{
+    cursor: pointer;
+   
+Color:
+#007e8f;
+    
+}
+
+.ak_container1>h5{
+    text-align: center;
+    color:#616161;
+    font-size: 15px;
+}
+.s_img{
+    height:25px;
+    width:80px;
+   
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.check{
+   display: flex;
+   
+    height:35px;
+    width:250px;
+    margin-top: 15px;
+}
+.check>h3{
+    margin-left: 12px;
+    margin-top: 10px;
+    color: #616161;
+    font-size:16px;
+ font-weight: 400;
+}
+.check>input{
+    height: 25px;
+    width: 25px;
+ 
+}
+@media only screen and (min-width:575px) and (max-width:991px){
+
+    .ak_container1{
+        margin: auto;
+        height:650px;
+        width: 400px;
+
+    }
+
+
+
+}
+
+
+
+
+    @media only screen and (min-width:293px) and (max-width:575px){
+
+
+                
+    .ak_container1{
+        margin: auto;
+        height:650px;
+        width:370px;
+        /* border: 1px solid green; */
+
+    }
+    }

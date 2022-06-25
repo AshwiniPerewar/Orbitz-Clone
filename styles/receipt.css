@@ -1,0 +1,48 @@
+.md_receipt_container{
+    width: 370px;
+    height: 500px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin: auto;
+   padding: 25px;
+   border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   margin-top: 70px;
+}
+
+.md_receipt_container div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.check_logo i{
+   color: green;
+   size: 10px;
+}
+
+.md_receipt_container div:nth-child(1){
+    justify-content: center;
+    font-size: 30px;
+    color: green;
+}
+
+.md_receipt_container div:nth-child(8){
+    justify-content:center;
+    gap: 20px;
+    
+}
+
+.button1, .button2{
+    background-color:#3a83a5;
+    border: none;
+    width: 90px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.p1{
+    color:#7b7f93 ;
+}
